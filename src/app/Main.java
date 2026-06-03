@@ -1,0 +1,42 @@
+package app;
+
+import model.GuiaTuristico;
+import model.Transportista;
+
+/**
+ * Simula etc...
+ *
+ * @author Alonso Bonansco
+ * @version 1.0.0
+ * @since Semana 3
+ *
+ */
+public class Main {
+    public static void main(String[] args) {
+
+        Transportista transportista1 = new Transportista(
+                "José", 56,
+                "Los Carrera 123", "Los Pellines", "Llanquihue",
+                "123456789", "No aplica",
+                350000, "Van", 12
+        );
+
+        GuiaTuristico guiaTuristico1 = new GuiaTuristico(
+                "María", 45,
+                "Jorge Alessandri 456", "Frutillar alto", "Frutillar",
+                "987654321", "maria@gmail.com",
+                550000, "Teatro del Lago", "Inglés"
+        );
+
+        GuiaTuristico guiaTuristico2 = new GuiaTuristico(
+                "Ricardo", 35,
+                "Ruta V-695 s/n", "Ensenada", "Puerto Varas",
+                "321987456", "ricardo@gmail.com",
+                800000, "Trekking volcán Osorno", "Alemán"
+        );
+
+        System.out.println(transportista1);
+        System.out.println(guiaTuristico1);
+        System.out.println(guiaTuristico2);
+    }
+}
