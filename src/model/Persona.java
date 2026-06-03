@@ -11,8 +11,8 @@ public class Persona {
     private String nombre;
     private int edad;
     // ==========================
-    private Direccion direccion;
-    private Contacto contacto;
+    private Direccion direccion;                // Integración de clases Direccion
+    private Contacto contacto;                  //  y Contacto como atributos
     // ==========================
 
     public Persona(String nombre, int edad, String calle,
@@ -21,8 +21,10 @@ public class Persona {
 
         this.nombre = nombre;
         this.edad = edad;
+        // ==============
         this.direccion = new Direccion(calle, sector, ciudad);
         this.contacto = new Contacto(numeroTelefono, correoElectronico);
+        // ==============
     }
 
     // Métodos getters y setters
