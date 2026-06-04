@@ -14,7 +14,8 @@ public class Empleado extends Persona {
                     String numeroTelefono, String correoElectronico,
                     double sueldo) {
 
-        super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico);
+        super(nombre, 0, calle, sector, ciudad, numeroTelefono, correoElectronico);
+        setEdad(edad);
         this.sueldo = sueldo;
     }
 
@@ -24,6 +25,15 @@ public class Empleado extends Persona {
 
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
+    }
+
+    @Override
+    public void setEdad(int edad) {
+        if (edad >= 18) {
+            super.setEdad(edad);
+        } else {
+            System.err.println("Un empleado no puede ser menor de edad.");
+        }
     }
 
     @Override

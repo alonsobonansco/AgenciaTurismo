@@ -29,7 +29,7 @@ public class Main {
         );
 
         GuiaTuristico guiaTuristico2 = new GuiaTuristico(
-                "Ricardo", 35,
+                "Ricardo", -35,
                 "Ruta V-695 s/n", "Ensenada", "Puerto Varas",
                 "321987456", "ricardo@gmail.com",
                 800000, "Trekking volcán Osorno", "Alemán"

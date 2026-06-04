@@ -41,7 +41,11 @@ public class Persona {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if(edad > 0) {
+            this.edad = edad;
+        } else {
+            System.err.println("La edad debe ser mayor a cero.");
+        }
     }
 
     public Direccion getDireccion() {
