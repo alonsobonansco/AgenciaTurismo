@@ -3,6 +3,7 @@ Alonso Antonio Bonansco Vergara
 Desarrollo Orientado a Objetos I  - 006A  
 Analista programador computacional  
 Campus virtual
+
 ---
 
 
@@ -11,6 +12,7 @@ Proyecto corresponde a una agencia de turismo ubicada
 en el sur de Chile (Llanquihue) con una problemática
 de organización. Se aplican principios de encapsulamiento, 
 composición y herencia.
+
 ---
 
 Estructura:  
