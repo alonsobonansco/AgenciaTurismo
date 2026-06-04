@@ -5,12 +5,14 @@ Analista programador computacional
 Campus virtual
 ---
 
+
 Descripción:  
 Proyecto corresponde a una agencia de turismo ubicada
 en el sur de Chile (Llanquihue) con una problemática
 de organización. Se aplican principios de encapsulamiento, 
 composición y herencia.
 ---
+
 Estructura:  
 ```text
 📁 src/
