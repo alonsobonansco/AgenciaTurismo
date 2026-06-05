@@ -1,9 +1,10 @@
 package model;
 
 /**
- *  Representa a un empleado en la Agencia, puede tener varios roles.
- *  Hereda de Persona (nombre, edad, dirección y contacto)
- *  Atributo propio: sueldo
+ *  Representa a un empleado en la Agencia, puede tener distintas ocupaciones.
+ *  Hereda de Persona sus métodos y atributos (nombre, edad, dirección y contacto).
+ *
+ *  Atributo propio: sueldo (que recibe el empleado)
  */
 public class Empleado extends Persona {
 
@@ -14,8 +15,7 @@ public class Empleado extends Persona {
                     String numeroTelefono, String correoElectronico,
                     double sueldo) {
 
-        super(nombre, 0, calle, sector, ciudad, numeroTelefono, correoElectronico);
-        setEdad(edad);
+        super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico);
         this.sueldo = sueldo;
     }
 
@@ -24,9 +24,20 @@ public class Empleado extends Persona {
     }
 
     public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
+        if (sueldo > 0) {
+            this.sueldo = sueldo;
+        } else {
+            System.err.println("El sueldo no puede ser un número negativo o cero.");
+        }
     }
 
+    /**
+     *  Método que sobrescribe a setEdad() en clase Persona
+     *  para validar si el empleado es mayor de edad y puede trabajar.
+     *  (En esta agencia es obligatorio ser mayor de edad)
+     *
+     * @param edad Edad del empleado
+     */
     @Override
     public void setEdad(int edad) {
         if (edad >= 18) {
@@ -38,6 +49,6 @@ public class Empleado extends Persona {
 
     @Override
     public String toString() {
-        return super.toString() + "Empleado en la Agencia.\nSueldo: " + sueldo + "\n";
+        return super.toString() + "Empleado en la Agencia. Sueldo: " + sueldo + "\n";
     }
 }

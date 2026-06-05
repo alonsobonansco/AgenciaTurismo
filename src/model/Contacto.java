@@ -1,7 +1,10 @@
 package model;
 
 /**
- *  Representa los datos de contacto
+ *  Representa los datos de contacto de las personas
+ *  para poder comunicarse con ellas.
+ *
+ *  Los atributos son numeroTelefono y correoElectronico.
  */
 public class Contacto {
 

@@ -1,9 +1,15 @@
 package model;
 
+/**
+ *  Representa a un guía turístico encargado de realizar paseos para turistas.
+ *
+ *  Sus atributos propios son circuitoTuristico (ruta que el guía conoce y realiza)
+ *  e idiomaSecundario (idioma que habla el guía además de Español, en próximas versiones se puede usar ArrayList)
+ */
 public class GuiaTuristico extends Empleado {
 
     private String circuitoTuristico;
-    private String idioma;
+    private String idiomaSecundario;
 
     public GuiaTuristico(String nombre, int edad,
                          String calle, String sector, String ciudad,
@@ -13,7 +19,7 @@ public class GuiaTuristico extends Empleado {
 
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico, sueldo);
         this.circuitoTuristico = circuitoTuristico;
-        this.idioma = idioma;
+        this.idiomaSecundario = idioma;
     }
 
     public String getCircuitoTuristico() {
@@ -25,17 +31,17 @@ public class GuiaTuristico extends Empleado {
     }
 
     public String getIdioma() {
-        return idioma;
+        return idiomaSecundario;
     }
 
     public void setIdioma(String idioma) {
-        this.idioma = idioma;
+        this.idiomaSecundario = idioma;
     }
 
     @Override
     public String toString() {
         return super.toString() +
                 "Ocupación: Guía turístico\nCircuito: " + circuitoTuristico +
-                " | Idioma: " + idioma + "\n\n";
+                " | Idioma: " + idiomaSecundario + "\n\n";
     }
 }

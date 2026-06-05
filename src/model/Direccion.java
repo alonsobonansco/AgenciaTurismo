@@ -1,7 +1,9 @@
 package model;
 
 /**
- *  Representa la dirección (de una persona)
+ *  Representa la dirección (de una persona).
+ *
+ *  Los atributos son calle, sector y ciudad, pensando en gente de la zona o alrededores inmediatos.
  */
 public class Direccion {
 
@@ -42,6 +44,6 @@ public class Direccion {
 
     @Override
     public String toString() {
-        return calle + ", " + sector + " (" + ciudad + ")\n";
+        return calle + ", " + sector + " (" + ciudad + ")";
     }
 }

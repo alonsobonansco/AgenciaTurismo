@@ -4,7 +4,7 @@ import model.GuiaTuristico;
 import model.Transportista;
 
 /**
- * Simula etc...
+ * Simula la creación de tres empleados y sus datos con diversas ocupaciones dentro de una Agencia de Turismo.
  *
  * @author Alonso Bonansco
  * @version 1.0.0
@@ -18,7 +18,7 @@ public class Main {
                 "José", 56,
                 "Los Carrera 123", "Los Pellines", "Llanquihue",
                 "123456789", "No aplica",
-                350000, "Van", 12
+                450000, "Van", 12
         );
 
         GuiaTuristico guiaTuristico1 = new GuiaTuristico(
@@ -29,7 +29,7 @@ public class Main {
         );
 
         GuiaTuristico guiaTuristico2 = new GuiaTuristico(
-                "Ricardo", -35,
+                "Ricardo", 35,
                 "Ruta V-695 s/n", "Ensenada", "Puerto Varas",
                 "321987456", "ricardo@gmail.com",
                 800000, "Trekking volcán Osorno", "Alemán"

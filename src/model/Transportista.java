@@ -1,5 +1,11 @@
 package model;
 
+/**
+ *  Representa a un transportista de la Agencia que lleva pasajeros
+ *  de un lugar a otro.
+ *
+ *  Sus atributos propios son vehiculo (para transportar gente) y capacidadMaxima (de su vehículo).
+ */
 public class Transportista extends Empleado {
 
     private String vehiculo;
@@ -29,7 +35,11 @@ public class Transportista extends Empleado {
     }
 
     public void setCapacidadMaxima(int capacidadMaxima) {
-        this.capacidadMaxima = capacidadMaxima;
+        if (capacidadMaxima > 0) {
+            this.capacidadMaxima = capacidadMaxima;
+        } else {
+            System.err.println("El tranportista debe tener un vehículo con capacidad de llevar a un pasajero.");
+        }
     }
 
     @Override
