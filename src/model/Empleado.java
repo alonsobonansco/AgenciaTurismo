@@ -15,6 +15,7 @@ public class Empleado extends Persona {
                     String numeroTelefono, String correoElectronico,
                     double sueldo) {
 
+        //  Palabra clave que llama al constructor de la clase padre (superclase)
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico);
         this.sueldo = sueldo;
     }

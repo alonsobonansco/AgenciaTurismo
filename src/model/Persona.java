@@ -1,7 +1,8 @@
 package model;
 
 /**
- *  Representa a una persona de la Agencia como un Empleado (o Cliente para futuras versiones).
+ *  Representa a una persona relacionada con la Agencia como un Empleado
+ *  (o Cliente para futuras versiones).
  *
  *  Aplica composición con Direccion y Contacto (en caso de que
  *  se elimine a un objeto 'persona' del sistema, no tiene sentido

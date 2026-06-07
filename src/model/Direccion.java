@@ -1,9 +1,10 @@
 package model;
 
 /**
- *  Representa la dirección (de una persona).
+ *  Representa la dirección de una persona.
  *
- *  Los atributos son calle, sector y ciudad, pensando en gente de la zona o alrededores inmediatos.
+ *  Los atributos son calle, sector y ciudad, pensando en gente de la zona
+ *  o alrededores inmediatos.
  */
 public class Direccion {
 

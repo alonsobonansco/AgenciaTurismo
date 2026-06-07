@@ -4,7 +4,8 @@ package model;
  *  Representa a un transportista de la Agencia que lleva pasajeros
  *  de un lugar a otro.
  *
- *  Sus atributos propios son vehiculo (para transportar gente) y capacidadMaxima (de su vehículo).
+ *  Sus atributos propios son vehiculo (para transportar gente) y
+ *  capacidadMaxima (de su vehículo).
  */
 public class Transportista extends Empleado {
 

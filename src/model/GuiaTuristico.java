@@ -4,7 +4,8 @@ package model;
  *  Representa a un guía turístico encargado de realizar paseos para turistas.
  *
  *  Sus atributos propios son circuitoTuristico (ruta que el guía conoce y realiza)
- *  e idiomaSecundario (idioma que habla el guía además de Español, en próximas versiones se puede usar ArrayList)
+ *  e idiomaSecundario (idioma que habla el guía además de Español,
+ *  en próximas versiones se puede usar ArrayList)
  */
 public class GuiaTuristico extends Empleado {
 

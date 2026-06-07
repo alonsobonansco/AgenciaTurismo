@@ -4,7 +4,8 @@ import model.GuiaTuristico;
 import model.Transportista;
 
 /**
- * Simula la creación de tres empleados y sus datos con diversas ocupaciones dentro de una Agencia de Turismo.
+ * Simula la creación de tres empleados con diversas ocupaciones y sus datos
+ * dentro de una Agencia de Turismo.
  *
  * @author Alonso Bonansco
  * @version 1.0.0
