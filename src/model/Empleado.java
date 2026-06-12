@@ -1,5 +1,7 @@
 package model;
 
+import util.SueldoInvalidoException;
+
 /**
  *  Representa a un empleado en la Agencia, puede tener distintas ocupaciones.
  *  Hereda de Persona sus métodos y atributos (nombre, edad, dirección y contacto).
@@ -10,25 +12,28 @@ public class Empleado extends Persona {
 
     private double sueldo;
 
-    public Empleado(String nombre, int edad,
+    public Empleado (String nombre, int edad,
                     String calle, String sector, String ciudad,
                     String numeroTelefono, String correoElectronico,
-                    double sueldo) {
+                    double sueldo)
+                    // Va después de los parámetros
+                    throws SueldoInvalidoException {
 
         //  Palabra clave que llama al constructor de la clase padre (superclase)
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico);
-        this.sueldo = sueldo;
+        this.setSueldo(sueldo);
     }
 
     public double getSueldo() {
         return sueldo;
     }
-
-    public void setSueldo(double sueldo) {
+                                         //  Lanza la excepción
+    public void setSueldo(double sueldo) throws SueldoInvalidoException {
         if (sueldo > 0) {
             this.sueldo = sueldo;
         } else {
-            System.err.println("El sueldo no puede ser un número negativo o cero.");
+            throw new SueldoInvalidoException("El sueldo no puede ser un número negativo o cero.");
+
         }
     }
 

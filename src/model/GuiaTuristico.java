@@ -1,5 +1,7 @@
 package model;
 
+import util.SueldoInvalidoException;
+
 /**
  *  Representa a un guía turístico encargado de realizar paseos para turistas.
  *
@@ -16,7 +18,10 @@ public class GuiaTuristico extends Empleado {
                          String calle, String sector, String ciudad,
                          String numeroTelefono, String correoElectronico,
                          double sueldo,
-                         String circuitoTuristico, String idioma) {
+                         String circuitoTuristico, String idioma)
+
+                         //  Las clases hijas también deben lanzar la excepción
+                         throws SueldoInvalidoException {
 
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico, sueldo);
         this.circuitoTuristico = circuitoTuristico;

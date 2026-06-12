@@ -1,5 +1,8 @@
 package model;
 
+import util.CapacidadMaximaInvalidaException;
+import util.SueldoInvalidoException;
+
 /**
  *  Representa a un transportista de la Agencia que lleva pasajeros
  *  de un lugar a otro.
@@ -16,11 +19,16 @@ public class Transportista extends Empleado {
                          String calle, String sector, String ciudad,
                          String numeroTelefono, String correoElectronico,
                          double sueldo,
-                         String vehiculo, int capacidadMaxima) {
+                         String vehiculo, int capacidadMaxima)
+
+                         //  Las clases hijas también deben lanzar la excepción
+                         //  Y la segunda excepción va separada por coma
+                         throws SueldoInvalidoException,
+                                CapacidadMaximaInvalidaException {
 
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico, sueldo);
         this.vehiculo = vehiculo;
-        this.capacidadMaxima = capacidadMaxima;
+        this.setCapacidadMaxima(capacidadMaxima);
     }
 
     public String getVehiculo() {
@@ -35,11 +43,15 @@ public class Transportista extends Empleado {
         return capacidadMaxima;
     }
 
-    public void setCapacidadMaxima(int capacidadMaxima) {
+                                                        //  Aquí se lanza nuevamente!!
+    public void setCapacidadMaxima(int capacidadMaxima) throws CapacidadMaximaInvalidaException {
         if (capacidadMaxima > 0) {
             this.capacidadMaxima = capacidadMaxima;
         } else {
-            System.err.println("El tranportista debe tener un vehículo con capacidad de llevar a un pasajero.");
+            throw new CapacidadMaximaInvalidaException(
+                    "El tranportista debe tener un vehículo con capacidad de llevar a un pasajero."
+            );
+
         }
     }
 
