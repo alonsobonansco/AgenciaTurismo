@@ -38,8 +38,6 @@ public class Persona {
         // ------------------
     }
 
-    //
-
     /**
      *  Método para validar la edad de la persona (considera menores de un año).
      *  Se prefiere un método específico porque o sino ocurren problemas de
