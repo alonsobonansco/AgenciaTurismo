@@ -33,8 +33,8 @@ public class Empleado extends Persona {
     }
 
     /**
-     *  Método que sobrescribe a setEdad() en clase Persona
-     *  para validar si el empleado es mayor de edad y puede trabajar.
+     *  Método que sobrescribe a setEdad() en clase Persona,
+     *  agrega validación básica para ver si el empleado es mayor de edad y puede trabajar.
      *  (En esta agencia es obligatorio ser mayor de edad)
      *
      * @param edad Edad del empleado

@@ -47,8 +47,8 @@ public class Persona {
     }
 
     /**
-     *  Método para validar que la persona tenga una edad real
-     *  (considera recién nacidos y menores de un año).
+     *  Método setter con validación básica para que la persona tenga una edad real
+     *  (considera menores de un año).
      *
      * @param edad Edad de la persona
      */
