@@ -1,5 +1,6 @@
 package model;
 
+import util.EdadInvalidaException;
 import util.SueldoInvalidoException;
 
 /**
@@ -21,7 +22,8 @@ public class GuiaTuristico extends Empleado {
                          String circuitoTuristico, String idioma)
 
                          //  Las clases hijas también deben lanzar la excepción
-                         throws SueldoInvalidoException {
+                         throws SueldoInvalidoException,
+                                EdadInvalidaException {
 
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico, sueldo);
         this.circuitoTuristico = circuitoTuristico;

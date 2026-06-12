@@ -3,6 +3,7 @@ package app;
 import model.GuiaTuristico;
 import model.Transportista;
 import util.CapacidadMaximaInvalidaException;
+import util.EdadInvalidaException;
 import util.SueldoInvalidoException;
 
 /**
@@ -19,7 +20,7 @@ public class Main {
 
         try {
             Transportista transportista1 = new Transportista(
-                    "José", 56,
+                    "José", 57,
                     "Los Carrera 123", "Los Pellines", "Llanquihue",
                     "123456789", "No aplica",
                     450000, "Van", 12
@@ -43,7 +44,9 @@ public class Main {
             System.out.println(guiaTuristico1);
             System.out.println(guiaTuristico2);
 
-        } catch (SueldoInvalidoException | CapacidadMaximaInvalidaException e) {
+        } catch (SueldoInvalidoException |
+                 CapacidadMaximaInvalidaException |
+                 EdadInvalidaException e) {
             System.err.println("Error: " + e.getMessage());
         }
 

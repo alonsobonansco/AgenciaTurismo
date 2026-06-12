@@ -1,6 +1,7 @@
 package model;
 
 import util.CapacidadMaximaInvalidaException;
+import util.EdadInvalidaException;
 import util.SueldoInvalidoException;
 
 /**
@@ -24,7 +25,8 @@ public class Transportista extends Empleado {
                          //  Las clases hijas también deben lanzar la excepción
                          //  Y la segunda excepción va separada por coma
                          throws SueldoInvalidoException,
-                                CapacidadMaximaInvalidaException {
+                                CapacidadMaximaInvalidaException,
+                                EdadInvalidaException {
 
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico, sueldo);
         this.vehiculo = vehiculo;

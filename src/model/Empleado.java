@@ -1,5 +1,6 @@
 package model;
 
+import util.EdadInvalidaException;
 import util.SueldoInvalidoException;
 
 /**
@@ -17,10 +18,12 @@ public class Empleado extends Persona {
                     String numeroTelefono, String correoElectronico,
                     double sueldo)
                     // Va después de los parámetros
-                    throws SueldoInvalidoException {
+                    throws SueldoInvalidoException,
+                           EdadInvalidaException {
 
         //  Palabra clave que llama al constructor de la clase padre (superclase)
         super(nombre, edad, calle, sector, ciudad, numeroTelefono, correoElectronico);
+        this.setEdad(edad);
         this.setSueldo(sueldo);
     }
 
@@ -45,11 +48,11 @@ public class Empleado extends Persona {
      * @param edad Edad del empleado
      */
     @Override
-    public void setEdad(int edad) {
+    public void setEdad(int edad) throws EdadInvalidaException {
         if (edad >= 18) {
             super.setEdad(edad);
         } else {
-            System.err.println("Un empleado no puede ser menor de edad.");
+            throw new EdadInvalidaException("Un empleado no puede ser menor de edad");
         }
     }
 
